@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  webapp:
+    build: ./
+    image: feele/esa2023exeter:1.0
+    environment:
+      ESA_MYSQL_HOST: ${ESA_MYSQL_HOST}
+      ESA_MYSQL_DB: ${ESA_MYSQL_DB}
+      ESA_MYSQL_USERNAME: ${ESA_MYSQL_USERNAME}
+      ESA_MYSQL_PASSWORD: ${ESA_MYSQL_PASSWORD}
+
+      ESA_MAIL_USERNAME: ${ESA_MAIL_USERNAME}
+      ESA_MAIL_PASSWORD: ${ESA_MAIL_PASSWORD}
+
+    ports:
+      - ${ESA_PORT}:80
+    volumes:
+      - "./src:/var/www/html"
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
