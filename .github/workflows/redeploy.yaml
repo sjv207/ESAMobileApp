@@ -1,10 +1,7 @@
+name: GitHub redeploy to FEELE01
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Test scenario tags'
-        required: false
-        type: boolean
 
 jobs:
   deployment:
@@ -13,5 +10,5 @@ jobs:
     - name: Deploy Stage
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'https://fgen.feele.exeter.ac.uk/git/pullAndDeploy/?accessToken=c6c94eeb-5d73-4006-8107-f92c3141a3cc&folderName=self-esteem'
+        url: 'https://fgen.feele.exeter.ac.uk/git/pullAndDeploy/?accessToken=c6c94eeb-5d73-4006-8107-f92c3141a3cc&folderName=real_effort_bargaining'
         method: 'POST'
