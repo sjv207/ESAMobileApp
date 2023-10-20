@@ -1,5 +1,5 @@
-name: GitHub redeploy to FEELE01
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: GitHub redeploy to FEELE server
+run-name: ${{ github.actor }} is redeploying this application 🚀
 on:
   workflow_dispatch:
 
