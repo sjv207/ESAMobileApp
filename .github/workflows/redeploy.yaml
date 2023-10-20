@@ -10,5 +10,5 @@ jobs:
     - name: Deploy Stage
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'https://fgen.feele.exeter.ac.uk/git/pullAndDeploy/?accessToken=c6c94eeb-5d73-4006-8107-f92c3141a3cc&folderName=real_effort_bargaining'
+        url: ${{ FPG_URL }}'?accessToken=${{ FPG_ACCESS_TOKEN }}&folderName=real_effort_bargaining'
         method: 'POST'
