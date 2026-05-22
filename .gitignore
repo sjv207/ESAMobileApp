@@ -15,4 +15,5 @@ __pycache__/
 .env
 *.bak
 reset_db.sh
+actions-runner/
 
