@@ -1,0 +1,14 @@
+name: GitHub redeploy to FEELE server
+run-name: ${{ github.actor }} is redeploying this application 🚀
+on:
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy Stage
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: '${{secrets.FPG_URL}}?accessToken=${{secrets.FPG_ACCESS_TOKEN}}&folderName=real_effort_bargaining'
+        method: 'POST'
